@@ -1,21 +1,25 @@
-package com.pojoutils.generic;
+package com.pojoutils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
+import static java.util.Objects.requireNonNull;
+
 /**
  * @author Alex L.
  */
-public class GenericBuilder<T> {
+public class GenericBuilder<T> implements Builder{
 
     private final Supplier<T> instantiator;
 
     private List<Consumer<T>> instanceModifiers = new ArrayList<>();
 
     public GenericBuilder(Supplier<T> instantiator) {
+        requireNonNull(instantiator);
         this.instantiator = instantiator;
     }
 
@@ -29,10 +33,13 @@ public class GenericBuilder<T> {
         return this;
     }
 
-    public T build() {
-        T value = instantiator.get();
-        instanceModifiers.forEach(modifier -> modifier.accept(value));
-        instanceModifiers.clear();
-        return value;
+    @Override
+    public Supplier<T> getInstantiator() {
+        return instantiator;
+    }
+
+    @Override
+    public List<Consumer<T>> getInstanceModifiers() {
+        return instanceModifiers;
     }
 }
