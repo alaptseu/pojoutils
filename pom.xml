@@ -47,7 +47,17 @@
         <maven-compiler-plugin.java.source.version>1.8</maven-compiler-plugin.java.source.version>
         <maven-compiler-plugin.java.target.version>1.8</maven-compiler-plugin.java.target.version>
         <maven-compiler-plugin.version>3.0</maven-compiler-plugin.version>
+        <junit.version>4.10</junit.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
