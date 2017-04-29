@@ -9,6 +9,7 @@
 
 # IntelliJ
 out/
+*.iml
 
 ### OSX ###
 .DS_Store
