@@ -8,3 +8,27 @@ Example:
 `  
 
 Stop writing boilerplate builder patterns and get productive using the GenericBuilder/PredicateBuilder
+
+You can integrate pojoutils by adding the following dependency in your pom.xml (only SNAPSHOT is available as for now)
+
+```xml
+<repositories>
+  <repository>
+     <id>oss.snapshots</id>
+     <name>OSS Sonatype Snapshot Repository</name>
+      <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+      <releases>
+       <enabled>false</enabled>
+      </releases>
+      <snapshots>
+       <enabled>true</enabled>
+      </snapshots>
+  </repository>
+</repositories>
+
+<dependency>
+  <groupId>com.github.alaptseu</groupId>
+  <artifactId>pojoutils</artifactId>
+  <version>1.0-SNAPSHOT</version>
+</dependency>
+```
