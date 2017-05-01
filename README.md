@@ -1,5 +1,5 @@
 # pojoutils
-The idea is to impplement generic builder that is capable of building every POJO with a default constructor.
+The idea is to implement generic builder that is capable of building every POJO with a default constructor.
 
 Example:
 
