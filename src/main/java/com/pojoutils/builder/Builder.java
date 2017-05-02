@@ -1,4 +1,4 @@
-package com.pojoutils;
+package com.pojoutils.builder;
 
 import java.util.List;
 import java.util.function.Consumer;
